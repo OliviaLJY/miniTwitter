@@ -1,0 +1,7 @@
+GET http://localhost:8086/getAllTweets
+Accept: application/json
+
+###
+http://localhost:8086/testHello?key1=1&key2=testKey2
+
+
