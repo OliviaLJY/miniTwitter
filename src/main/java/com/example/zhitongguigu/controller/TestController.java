@@ -4,6 +4,8 @@ import com.example.zhitongguigu.domain.TweetPost;
 import com.example.zhitongguigu.request.TestRequest;
 import com.example.zhitongguigu.response.TestResponse;
 import com.example.zhitongguigu.service.TestService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +14,6 @@ import java.util.List;
 
 @RestController
 public class TestController {
-
     @Resource
     private TestService testService;
 

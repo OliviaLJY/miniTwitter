@@ -2,6 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.zhitongguigu.mapper.TestMapper" >
     <select id="getListOfTweets" resultType="com.example.zhitongguigu.domain.TweetPost">
-        select `id`, `Title` from `Tweets`
+        select t.*,u.username from Tweets t
+        left join User  u on t.AuthorId = u.id
     </select>
 </mapper>

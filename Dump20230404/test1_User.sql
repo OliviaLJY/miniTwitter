@@ -1,0 +1,63 @@
+-- MySQL dump 10.13  Distrib 8.0.30, for macos12 (x86_64)
+--
+-- Host: test1.caspko9hc50w.us-east-1.rds.amazonaws.com    Database: test1
+-- ------------------------------------------------------
+-- Server version	8.0.28
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+SET @MYSQLDUMP_TEMP_LOG_BIN = @@SESSION.SQL_LOG_BIN;
+SET @@SESSION.SQL_LOG_BIN= 0;
+
+--
+-- GTID state at the beginning of the backup 
+--
+
+SET @@GLOBAL.GTID_PURGED=/*!80000 '+'*/ '';
+
+--
+-- Table structure for table `User`
+--
+
+DROP TABLE IF EXISTS `User`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `User` (
+  `id` bigint NOT NULL,
+  `username` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `name` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `password` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE KEY `username_UNIQUE` (`username`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `User`
+--
+
+LOCK TABLES `User` WRITE;
+/*!40000 ALTER TABLE `User` DISABLE KEYS */;
+INSERT INTO `User` VALUES (-9120883330223807377,'testusername5','username5','4ce1dab8fe426a99625a1d69eddb2769'),(251961696351031296,'testusername3','username3','c4625ff26e0d08bb9c2e32c820c602a8'),(263499610541133824,NULL,'username11','92e4c95a6b7fe68e118c0539227e93da'),(263500115577278464,'testusername14','username14','7fc2f5cdcaeddb201b378ffe5e46bba6'),(263505797751902208,'testusername15','username15','9e4a7660c4a6e00efcb620c4a85c7d5c'),(276517968693825536,'1','1','5f293a0d411d3831440cd2cc2ba25e63'),(276555680754831360,'2','2','7ce3f27a3ea23f6f5c87fd1c72de8abb'),(295723011271692288,'root123123','root123123','ccedc5f8fa74426bafa82bb79a59095b'),(298682623180541952,'testusernaeb123','testusereweb123','95cb1e0cbe67a67925f9dff9ced086c7'),(298682750288924672,'testusernameweb123','testusernameweb123','e634f5fc2ec3f4d5e0c59c6d77092ef8'),(298683255794831360,'testusername123','testusername123','1ce42523faf13979d11b23d6429870cb'),(2169474524890870784,'testusername6','username5','1481a763772517fb2f6fce8fffebadcf'),(6200963476433743224,'testusername2','testname2','c4d8a57e2ca5dc5d71d2cf3dbbbbaabe'),(6647137937016545237,'testusername1','testname1','b7e055c6165da55c3e12c49ae5207455');
+/*!40000 ALTER TABLE `User` ENABLE KEYS */;
+UNLOCK TABLES;
+SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2023-04-04 22:13:02
