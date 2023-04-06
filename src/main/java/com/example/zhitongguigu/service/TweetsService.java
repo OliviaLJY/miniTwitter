@@ -83,7 +83,7 @@ public class TweetsService {
 
     public void getPopularTweets(){
         List<Tweets> popularTweets = popularTweetsMapper.getPopularTweets();
-        List<Long> ids = popularTweets.stream().map(Tweets::getId).toList();
+        List<Long> ids = popularTweets.stream().map(Tweets::getId).collect(Collectors.toList());
 
         for(Long id : ids){
             Populartweetssnapshot populartweetssnapshot = new Populartweetssnapshot();
