@@ -29,7 +29,7 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: Execute Jar File
+    - name: Execute Jar Files
       run: sudo kill -9 `sudo lsof -t -i:8085` & sudo java -jar /home/ec2-user/actions-runner/_work/minitwitterAwsDeployment/minitwitterAwsDeployment/target/minitwitter-exe.jar > output.txt &
 
 #     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
