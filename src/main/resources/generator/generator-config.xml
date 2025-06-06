@@ -23,7 +23,7 @@
         </jdbcConnection>
 
         <javaModelGenerator targetProject="src/main/java"
-                            targetPackage="com.example.zhitongguigu.domain"/>
+                            targetPackage="com.example.mytwitter.domain"/>
 
         <!-- mapper xml-->
         <sqlMapGenerator targetProject="src/main/resources"
@@ -31,7 +31,7 @@
 
         <!-- mapper -->
         <javaClientGenerator targetProject="src/main/java"
-                             targetPackage="com.example.zhitongguigu.mapper"
+                             targetPackage="com.example.mytwitter.mapper"
                              type="XMLMAPPER"/>
 
         <table tableName="PopularTweetsSnapshot"/>
